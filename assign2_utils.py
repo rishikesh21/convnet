@@ -117,6 +117,7 @@ answer = {
 import pickle as pk
 with open('/Users/mac/Downloads/CS5242/Release/part1/A0191569N.pkl', 'wb') as f:
  pk.dump(answer, f)
+res=validate('/Users/mac/Downloads/CS5242/Release/part1/A0191569N.pkl')
 
 
 

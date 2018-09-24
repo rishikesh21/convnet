@@ -84,7 +84,7 @@ def train_mnist():
                   optimizer='sgd',
                   metrics=['accuracy'])
 
-    model.fit(x=train_x, y=train_y, epochs=1, verbose=1)
+    model.fit(x=train_x, y=train_y,batch_size=128, epochs=1, verbose=1)
     loss, acc = model.evaluate(x=test_x, y=test_y)
     print('Test accuracy is {:.4f}'.format(acc))
     json_string = model.to_json()
@@ -104,7 +104,7 @@ def train_cifar10():
                   optimizer='sgd',
                   metrics=['accuracy'])
 
-    model.fit(x=train_x, y=train_y, batch_size=32,epochs=1, verbose=1)
+    model.fit(x=train_x, y=train_y,epochs=20, verbose=1)
     loss, acc = model.evaluate(x=test_x, y=test_y)
     print('Test accuracy is {:.4f}'.format(acc))
     json_string = model.to_json()
@@ -115,6 +115,6 @@ def train_cifar10():
 
 
 if __name__ == '__main__':
-    train_mnist()
-    #train_cifar10()
+    #train_mnist()
+    train_cifar10()
 
