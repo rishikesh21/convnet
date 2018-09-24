@@ -57,3 +57,4 @@ if __name__ == '__main__':
     model.fit(x=train_x, y=train_y, batch_size=128,epochs=1, verbose=1)
     loss, acc = model.evaluate(x=test_x, y=test_y)
     print('Test accuracy is {:.4f}'.format(acc))
+    model.save("A0191569N_mnist.h5")

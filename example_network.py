@@ -16,7 +16,7 @@ def example_network(input_shape=(28, 28, 1), class_num=10):
 
     im_input = Input(shape=input_shape)
 
-    t = Conv2D(16, (3, 3))(im_input)
+    t = Conv2D(16, (3, 3),)(im_input)
     t = Activation('relu')(t)
     t = MaxPool2D(pool_size=(2, 2))(t)
     t = Dropout(0.9)(t)

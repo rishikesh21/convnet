@@ -63,6 +63,7 @@ if __name__ == '__main__':
                   optimizer=opt,
                   metrics=['accuracy'])
 
+    #
     #model.fit(x=train_x, y=train_y, batch_size=32,epochs=1, verbose=1,shuffle=True)
     #loss, acc = model.evaluate(x=test_x, y=test_y)
     #print('Test accuracy is {:.4f}'.format(acc))
@@ -102,14 +103,4 @@ if __name__ == '__main__':
     loss, acc = model.evaluate(x=test_x, y=test_y)
     print('Test accuracy is {:.4f}'.format(acc))
 
-
-# if not os.path.isdir(save_dir):
-#     os.makedirs(save_dir)
-# model_path = os.path.join(save_dir, model_name)
-# model.save(model_path)
-# print('Saved trained model at %s ' % model_path)
-#
-# # Score trained model.
-# scores = model.evaluate(x_test, y_test, verbose=1)
-# print('Test loss:', scores[0])
-# print('Test accuracy:', scores[1])
+    model.save("A0191569N_cifar10.h5")
